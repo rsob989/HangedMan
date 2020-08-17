@@ -21,7 +21,7 @@ public class GameLogic {
     }
 
     public void hangedMan(char[] word, char[] password, ContactWithUser cwu){
-        boolean goodChoice = false;
+        boolean goodChoice;
         boolean endOfTheGame = false;
         boolean win = false;
         boolean theSameChoice;
@@ -57,6 +57,7 @@ public class GameLogic {
 
         } while (!endOfTheGame);
 
+        showPassword(word, cwu);
         printResult(cwu, win);
 
     }
